@@ -136,6 +136,84 @@ h6 {
     letter-spacing: 1.1px;
 }
 
+/* BURGER */
+.header-burger{
+    display: none;
+    flex-direction: column;
+    position: relative;
+    width: 20px
+}
+.burger-menu{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    height: 0;
+    text-align: center;
+    padding: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.burger-menu a{
+    margin: 5px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+.burger-menu a:nth-child(1){
+    color: #3D8B74;
+    font-weight: 800;
+}
+.header-nav-burger{
+    display: flex;
+    flex-direction: column;
+    width: 25px;
+    position: relative;
+}
+.burger-checkbox{
+    opacity: 0;
+    z-index: 1;
+}
+
+.burger-line{
+    position: absolute;
+    height: 4px;
+    border-radius: 15px;
+    width: 100%;
+    background-color: black;
+    top: -15%;
+    transition: all 0.3s ease;
+}
+.burger-line:nth-child(3){
+    top: 35%;
+}
+.burger-line:nth-child(2){
+    top: 85%;
+}
+
+.burger-checkbox:checked ~ .burger-line:nth-child(3){
+    top: 35%;
+    transform: rotate(45deg);
+}
+.burger-checkbox:checked ~ .burger-line:nth-child(2){
+    top: 35%;
+    transform: rotate(45deg);
+}
+.burger-checkbox:checked ~ .burger-line:nth-child(4){
+    top: 35%;
+    transform: rotate(-45deg);
+}
+.burger-checkbox:checked ~ .burger-menu{
+    height: 120px;
+}
+
+/* СВЕРХУ BURGER */
+
 .header-nav-items a{
     font-style: normal;
     font-weight: 400;
@@ -146,6 +224,10 @@ h6 {
     text-decoration: none;
     margin: 0 46px 0 0;
     transition: all 0.2s ease;
+}
+.header-nav-items a:nth-child(1){
+    color: #3D8B74;
+    font-weight: 800;
 }
 .header-nav-items a:hover{
     color: #3D8B74;
@@ -622,6 +704,15 @@ h6 {
     .container{
         width:auto;
     }
+    .header-nav-items{
+        display: none;
+    }
+    .header-burger{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 20px
+    }
     .main-flex{
         display: flex;
         flex-direction: column-reverse;
@@ -679,6 +770,18 @@ h6 {
 
 
 @media (min-width: 650px) and (max-width: 767px){
+    .header-nav-logo{
+        font-size: 24px;
+    }
+    .header-nav-items{
+        display: none;
+    }
+    .header-burger{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 20px
+    }
     .header-background-wrapper{
         width: 100%;
     }
@@ -751,6 +854,18 @@ h6 {
 }
 
 @media (min-width: 481px) and (max-width: 649px){
+    .header-nav-logo{
+        font-size: 24px;
+    }
+    .header-nav-items{
+        display: none;
+    }
+    .header-burger{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 20px
+    }
     .header-background-wrapper{
         width: 100%;
     }
@@ -877,6 +992,18 @@ h6 {
 /* ////////////////////////////////////// */
 
 @media (min-width: 320px) and (max-width: 480px){
+    .header-nav-items{
+        display: none;
+    }
+    .header-burger{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 20px
+    }
+    .header-nav-logo{
+        font-size: 24px;
+    }
     .header-background-wrapper{
         width: 100%;
     }
@@ -1006,5 +1133,10 @@ h6 {
     }
     .footer-end-title {
     font-size: 12px;
+    }
+
+
+    .main-content-products-pagination-btn{
+        color: black;
     }
 }
